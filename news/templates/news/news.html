@@ -1,0 +1,83 @@
+﻿<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="description" content="">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>{{ Article.title }}</title>
+<link rel="alternate" type="application/rss+xml" title="" href="feed/index.html">
+<link href="http://fonts.googleapis.com/css?family=Raleway:700,300" rel="stylesheet"
+        type="text/css">
+<link rel="stylesheet" href="{% static 'news/css/style.css' %}">
+<link rel="stylesheet" href="{% static 'news/css/prettify.css' %}">
+<link rel="stylesheet" href="{% static 'news/css/normal.css'%}">
+</head>
+<body>
+<div class="wrapper">
+<nav>
+ 
+  	<div class="pull-left">
+    	<h1><a href="javascript:"><img src="{% static 'news/img/icon.png' %}" alt="Free Documentation Template Icon" /> <span>GXXNEWS</span></a></h1>
+    </div>
+
+    <div class="pull-right">
+    	<a href="{% url 'news:page' 1%}" class="btn btn-download"><img src="{% static 'news/img/download.png' %}" width="25" alt="Return" /> Return</a>
+    </div>
+
+</nav>
+<header>
+  <div class="container">
+    <h2 class="lone-header">NEWS DEMO</h2>
+  </div>
+</header>
+<section>
+  <div class="container">
+    <ul class="docs-nav">
+      <li><strong>Title1</strong></li>
+      <li><a href="#tag1">Tag1</a></li>
+      <li><a href="#tag2">Tag2</a></li>
+      <li><a href="#tag3">Tag3</a></li>
+      <li><a href="#tag4">Tag4</a></li>
+      <li class="separator"></li>
+      <li><strong>Title2</strong></li>
+      <li><a href="#tag5">Tag5</a></li>
+      <li><a href="#tag6">Tag6</a></li>
+      <li><a href="#tag7">Tag7</a></li>
+      <li><a href="#tag8">Tag8</a></li>
+      <li><a href="#tag9">Tag9</a></li>
+      <li><a href="#tag10">Tag10</a></li>
+      <li><a href="#tag11">Tag11</a></li>
+    </ul>
+    <div class="docs-content">
+      <h3>{% block title %}
+          {% endblock %}</h3>
+      <p> {% block content %}
+          {% endblock %}</p>
+    {% block li %}
+    {% endblock li %}
+    {% block page %}
+    {% endblock page %}
+    </div>
+  </div>
+</section>
+<section class="vibrant centered">
+  <div class="">
+    <h4>This is a DEMO of NxgxxNews Page.</h4>
+  </div>
+</section>
+<footer>
+  <div class="">
+    <p> This is a DEMO of <a href="{% url 'news:page' 1%}">NxgxxNews</a></p>
+  </div>
+</footer>
+</div>
+<p id="back-to-top"><a href="#top"><span></span></a></p>
+<script src="{% static 'news/js/jquery.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'news/js/prettify/prettify.js' %}"></script>
+<script src="https://cdn.bootcss.com/prettify/r298/run_prettify.js"></script>
+<script src="{% static 'news/js/layout.js' %}"></script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+{% extends 'news/news.html' %}
+<html>
+<head>
+<body>
+{% block li %}
+    <ul>
+    {% for article in article_list %}
+    <li><a href="{% url 'news:detail' article.id %}">{{ article.title }}</a><span>{{ article.pub_date|date:'Y-m-d' }}</span></li>
+    {% endfor %}
+    </ul>
+{% endblock li%}
+{% block page %}
+        <center>
+        <a href="{% url 'news:page' 1%}">首页</a>
+        {% ifnotequal now_page 1 %}
+            <a href="{% url 'news:page' pageup %}">
+                上一页
+            </a>
+        {% endifnotequal %}
+        第{{ now_page }}/{{ all_page }}页
+        {% ifnotequal now_page all_page %}
+            <a href="{% url 'news:page' pagedown %}">
+                下一页
+            </a>
+        {% endifnotequal %}
+        <a href="{% url 'news:page' all_page %}">尾页</a>
+        </center>
+{% endblock page %}
+</body>
+</head>
+</html>

@@ -1,0 +1,14 @@
+{% extends "home/index.html" %}
+<html>
+{% load static %}
+<link rel="stylesheet" href="{% static 'home/css/style.css' %}">
+{% block li %}
+{% if article_list %}
+<ul style="text-align:left">
+{% for Article in article_list %}
+<li style="list-style: none"><a href="{% url 'news:detail' Article.id %}" target="_blank">{{ Article.title }}</a><span>{{ Article.update_time|date:"Y-m-d" }}</span></li>
+{% endfor %}
+</ul>
+{% endif %}
+{% endblock li %}
+</html>

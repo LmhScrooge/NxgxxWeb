@@ -1,0 +1,10 @@
+{% extends "news/news.html" %}
+
+{% block title %}
+{{ Article.title }}
+{% endblock %}
+{% block content %}
+{% autoescape off %}
+{{ Article.content }}
+{% endautoescape %}
+{% endblock %}

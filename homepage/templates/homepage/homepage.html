@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="none">
+    <meta name="author" content="Liu">
+    <meta name="keywords" content="Nxgxx">
+    <link rel="shortcut icon" href="img/favicon.png">
+    <title>
+      Nxgxx | Home
+    </title>
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="{% static 'homepage/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'homepage/css/theme.css' %}">
+    <link rel="stylesheet" href="{% static 'homepage/css/bootstrap-reset.css' %}">
+    <!-- <link href="css/bootstrap.min.css" rel="stylesheet">-->
+
+    <!--external css-->
+    <link rel="stylesheet" href="{% static 'homepage/assets/font-awesome/css/font-awesome.css' %}" />
+    <link rel="stylesheet" href="{% static 'homepage/css/flexslider.css' %}"/>
+    <link rel="stylesheet" href="{% static 'homepage/assets/bxslider/jquery.bxslider.css' %}"/>
+    <link rel="stylesheet" href="{% static 'homepage/css/animate.css' %}">
+    <link rel="stylesheet" href="{% static 'homepage/assets/owlcarousel/owl.carousel.css' %}">
+    <link rel="stylesheet" href="{% static 'homepage/assets/owlcarousel/owl.theme.css' %}">
+
+    <link rel="stylesheet" href="{% static 'homepage/css/superfish.css' %}" media="screen">
+    <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Lato' type='text/css'>
+    <!-- <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'> -->
+
+
+    <!-- Custom styles for this template -->
+    <link rel="stylesheet" type="text/css" href="{% static 'homepage/css/component.css' %}">
+    <link rel="stylesheet" href="{% static 'homepage/css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'homepage/css/style-responsive.css' %}" />
+    <link rel="stylesheet" href="{% static 'homepage/css/rows.css' %}">
+
+    <link rel="stylesheet" type="text/css" href="{% static 'homepage/css/parallax-slider/parallax-slider.css' %}" />
+    <script type="text/javascript" src="{% static 'homepage/js/parallax-slider/modernizr.custom.28468.js' %}">
+    </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 tooltipss and media queries -->
+    <!--[if lt IE 9]>
+    <script src="{% static 'homepage/js/html5shiv.js' %}">
+    </script>
+    <![endif]-->
+  </head>
+
+  <body>
+    <!--header start-->
+    <header class="head-section">
+      <div class="navbar navbar-default navbar-static-top container">
+          <div class="navbar-header">
+              <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse" type="button">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <div style="padding-bottom: 25px;padding-top: 30px">
+              <img src="{% static 'homepage/img/logo.png' %} " alt="logo" >
+              </div>
+          </div>
+          <div class="navbar-collapse collapse">
+              <ul class="nav navbar-nav">
+                  <li class="dropdown">
+                      <a class="dropdown-toggle" data-close-others="false" data-delay="0" data-hover=
+                      "dropdown" data-toggle="dropdown" href="#">Home <i class="fa fa-angle-down"></i>
+                      </a>
+                      <ul class="dropdown-menu">
+                          <li>
+                              <a href="#">Home Page1</a>
+                          </li>
+                          <li>
+                              <a href="#">Home Page2</a>
+                          </li>
+                          <li>
+                              <a href="#">Home Page3</a>
+                          </li>
+                      </ul>
+                  </li>
+                  <li class="dropdown">
+                      <a class="dropdown-toggle" data-close-others="false" data-delay="0" data-hover=
+                      "dropdown" data-toggle="dropdown" href="#">About <i class="fa fa-angle-down"></i>
+                      </a>
+                      <ul class="dropdown-menu">
+                          <li>
+                              <a href="#">Page1</a>
+                          </li>
+                          <li>
+                              <a href="#">Page2</a>
+                          </li>
+                          <li>
+                              <a href="#">Page3</a>
+                          </li>
+                          <li>
+                              <a href="#">Page4</a>
+                          </li>
+                          <li class="dropdown-submenu">
+                              <a href="#" >More Pages</a>
+                              <ul class="dropdown-menu">
+                                  <li>
+                                      <a href="#" >Second Page1</a>
+                                  </li>
+                                  <li class="dropdown-submenu">
+                                      <a href="#">Second Page2</a>
+                                      <ul class="dropdown-menu">
+                                          <li>
+                                              <a href="#">3rd Page1</a>
+                                          </li>
+                                          <li>
+                                              <a href="#">3rd Page2</a>
+                                          </li>
+                                      </ul>
+                                  </li>
+                                  <li>
+                                      <a href="#">Second Page3</a>
+                                  </li>
+                                  <li>
+                                      <a href="#">Second Page4</a>
+                                  </li>
+                              </ul>
+                          </li>
+                      </ul>
+                  </li>
+                  <li class="dropdown">
+                      <a class="dropdown-toggle" data-close-others="false" data-delay="0" data-hover=
+                      "dropdown" data-toggle="dropdown" href="#">News <i class="fa fa-angle-down"></i>
+                      </a>
+                      <ul class="dropdown-menu">
+                          <li>
+                              <a href="{% url 'news:page' 1 %}" target="_blank">NewsIndex</a>
+                          </li>
+                          <li>
+                              <a href="#">Page1</a>
+                          </li>
+                          <li>
+                              <a href="#">Page2</a>
+                          </li>
+                          <li>
+                              <a href="#">Page3</a>
+                          </li>
+                      </ul>
+                  </li>
+                  <li>
+                      <a href="/admin">Login</a>
+                  </li>
+                  <li><input class="form-control search" placeholder=" Search" type="text"></li>
+              </ul>
+          </div>
+      </div>
+    </header>
+    <!--header end-->
+
+    <!-- Sequence Modern Slider -->
+    <div class="slider-new" id="slider">
+        <div class="slider-inner">
+            <div class="item">
+                <img class="img" style="background-size:100%;background: url('{% static 'homepage/img/bg_new1.jpg' %}');">
+            </div>
+            <div class="item">
+                <img class="img" style="background-size:100%;background: url('{% static 'homepage/img/bg_new1.jpg' %}');">
+            </div>
+            <div class="item">
+                <img class="img" style="background-size:100%;background: url('{% static 'homepage/img/bg_new1.jpg' %}');">
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container">
+      <div class="row mar-b-50">
+        <div class="col-md-12">
+          <div class="text-center feature-head wow fadeInDown">
+            <h1 class="">
+              welcome to Nxgxx
+            </h1>
+          </div>
+          <div class="feature-box">
+            <div class="col-md-4 col-sm-4 wow fadeInUp">
+              <div class="feature-box-heading">
+                <h4 class="text-center">
+                  <b>News</b>
+                </h4>
+              </div>
+            <div id="newsbox">
+              {% block li %}
+              {% endblock li %}
+            <a href="{% url 'news:page' 1%}" target="_blank" class="btn btn-link btn-sm">查看更多</a>
+            </div>
+            </div>
+            <div class="col-md-4 col-sm-4 text-center wow fadeInUp">
+              <div class="feature-box-heading">
+                <h4>
+                  <b>News</b>
+                </h4>
+              </div>
+            </div>
+            <div class="col-md-4 col-sm-4 text-center wow fadeInUp">
+              <div class="feature-box-heading">
+                <h4>
+                  <b>News</b>
+                </h4>
+              </div>
+            </div>
+          </div>
+          <!--feature end-->
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+        <div class="row mar-b-50">
+            <div class="col-md-12">
+                <div class="text-center feature-head wow fadeInUp">
+                    <h1>
+                        <b>智慧城市运营中心</b>
+                    </h1>
+                    <p>
+                        智慧城市运营中心
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--property start-->
+    <div class="property gray-bg">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-lg-8 col-sm-8 col-xs-8 col-md-8 text-center wow fadeInLeft">
+            <img src="{% static 'homepage/img/bg_chengshi.jpg'%}" alt="">
+          </div>
+          <div class="col-lg-4 col-sm-4 col-xs-4 col-md-4 text-center wow fadeInRight">
+            <h1>
+              城市概况模块
+            </h1>
+            <hr>
+            <p >
+              <i class="fa fa-check fa-lg pr-10">
+              </i>
+                城市情况
+            </p>
+            <p >
+              <i class="fa fa-check fa-lg pr-10">
+              </i>
+                经济指数
+            </p>
+            <p >
+              <i class="fa fa-check fa-lg pr-10">
+              </i>
+                生产力发展水平
+            </p>
+            <hr>
+            <a href="javascript:;" class="btn btn-purchase text-center">
+              了解更多
+            </a>
+          </div>
+        </div>
+      </div>
+        <hr>
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-lg-4 col-sm-4 col-xs-4 col-md-4 text-center wow fadeInLeft">
+            <h1>
+                智慧政务模块
+            </h1>
+            <hr>
+            <p class="text-right">
+                城市情况
+                <i class="fa fa-check fa-lg pr-10"></i>
+            </p>
+            <p class="text-right">
+                经济指数
+                <i class="fa fa-check fa-lg pr-10"></i>
+            </p>
+            <p class="text-right">
+                生产力发展水平
+                <i class="fa fa-check fa-lg pr-10"></i>
+            </p>
+            <hr>
+            <a href="javascript:;" class="btn btn-purchase">
+              了解更多
+            </a>
+          </div>
+           <div class="col-lg-8 col-sm-8 col-xs-8 col-md-8 text-center wow fadeInRight">
+            <img src="{% static 'homepage/img/bg_zhengwu.jpg'%}" alt="">
+           </div>
+        </div>
+      </div>
+    </div>
+    <!--property end-->
+
+    <div id="home-services">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <h2>
+              我们拥有
+            </h2>
+          </div>
+          <div class="col-md-4">
+            <div class="h-service">
+              <div class="h-service-content wow fadeInUp">
+                <h3>
+                    <b>立体防控云防系统</b>
+                </h3>
+                <p>
+                  立体防控云防系统采用增强现实技术，使背景信息可搜索、可定位，并能实现GPS坐标映射、方位感知、视频联动等功能。
+                  <br>
+                  <a href="#" class="btn btn-primary">
+                    了解更多
+                  </a>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="h-service">
+              <div class="h-service-content wow fadeInUp">
+                <h3>
+                  <b>智慧城市解决方案</b>
+                </h3>
+                <p>
+                  高新兴率先构建智慧城市顶层设计，以“城市数据总线”为核心，深入分析智慧城市中安防、交通、城管、教育、旅游、金融等。
+                  <br>
+                  <a href="#" class="btn btn-primary">
+                    了解更多
+                  </a>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="h-service">
+              <div class="h-service-content wow fadeInUp">
+                <h3>
+                  <b>动态人脸布控系统</b>
+                </h3>
+                <p>
+                  抓拍人脸照片，即时分析人脸特征，快速完成人脸照片与后端数据库的黑名单的比对和识别，并能进行报警提示，实现智能化的视频监控。
+                  <br>
+                  <a href="#" class="btn btn-primary">
+                    了解更多
+                  </a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- /row -->
+
+      </div>
+      <!-- /container -->
+
+    </div>
+    <!-- service end -->
+    <div class="hr">
+      <span class="hr-inner"></span>
+    </div>
+
+    <div class="container">
+      <div class="row mar-b-50 our-clients">
+        <div class="col-md-3">
+          <h2>
+              <b>友情链接</b>
+          </h2>
+          <p>
+          </p>
+        </div>
+        <div class="col-md-9">
+          <div class="outside">
+            <p>
+              <span id="slider-prev">
+              </span>
+              |
+              <span id="slider-next">
+              </span>
+            </p>
+          </div>
+
+          <ul class="bxslider1 clients-list">
+            <li>
+              <a href="#">
+                <img src="{% static 'homepage/img/clients/graylogo6.png' %}" alt="" />
+
+                <img src="{% static 'homepage/img/clients/newlogo6.png' %}" class="color-img" alt="" />
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="{% static 'homepage/img/clients/graylogo6.png' %}" alt="" />
+
+                <img src="{% static 'homepage/img/clients/newlogo6.png' %}" class="color-img" alt="" />
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="{% static 'homepage/img/clients/graylogo6.png' %}" alt="" />
+
+                <img src="{% static 'homepage/img/clients/newlogo6.png' %}" class="color-img" alt="" />
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="{% static 'homepage/img/clients/graylogo6.png' %}" alt="" />
+
+                <img src="{% static 'homepage/img/clients/newlogo6.png' %}" class="color-img" alt="" />
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="{% static 'homepage/img/clients/graylogo6.png' %}" alt="" />
+
+                <img src="{% static 'homepage/img/clients/newlogo6.png' %}" class="color-img" alt="" />
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="{% static 'homepage/img/clients/graylogo6.png' %}" alt="" />
+
+                <img src="{% static 'homepage/img/clients/newlogo6.png' %}" class="color-img" alt="" />
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="{% static 'homepage/img/clients/graylogo6.png' %}" alt="" />
+
+                <img src="{% static 'homepage/img/clients/newlogo6.png' %}" class="color-img" alt="" />
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!-- END CLIENTS -->
+    </div>
+
+
+
+
+    <!--container end-->
+
+    <!--footer start-->
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-3 col-sm-3 address wow fadeInUp" data-wow-duration="2s" data-wow-delay=".1s">
+            <h1>
+              contact info
+            </h1>
+            <address>
+              <p><i class="fa fa-home pr-10"></i>地址:湖南省宁乡</p>
+              <p><i class="fa fa-globe pr-10"></i>中国,宁乡</p>
+              <p><i class="fa fa-mobile pr-10"></i>电话:</p>
+              <p><i class="fa fa-phone pr-10"></i>手机:</p>
+              <p><i class="fa fa-envelope pr-10"></i>邮箱：<a href="javascript:;">example@example.com</a></p>
+            </address>
+          </div>
+          <div class="col-lg-3 col-sm-3">
+            <div class="page-footer wow fadeInUp" data-wow-duration="2s" data-wow-delay=".5s">
+              <h1>
+                Our Company
+              </h1>
+              <ul class="page-footer-list">
+                <li>
+                  <i class="fa fa-angle-right"></i>
+                  <a href="#">About Us</a>
+                </li>
+                <li>
+                  <i class="fa fa-angle-right"></i>
+                  <a href="#">Support</a>
+                </li>
+                <li>
+                  <i class="fa fa-angle-right"></i>
+                  <a href="#">Service</a>
+                </li>
+                <li>
+                  <i class="fa fa-angle-right"></i>
+                  <a href="#">Privacy Policy</a>
+                </li>
+                <li>
+                  <i class="fa fa-angle-right"></i>
+                  <a href="#">We are Hiring</a>
+                </li>
+                <li>
+                  <i class="fa fa-angle-right"></i>
+                  <a href="#">Term & condition</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-3 col-sm-3">
+            <div class="text-footer wow fadeInUp" data-wow-duration="2s" data-wow-delay=".7s">
+              <h1>
+                Text Widget
+              </h1>
+              <p>
+                This is a text widget.Lorem ipsum dolor sit amet.
+                This is a text widget.Lorem ipsum dolor sit amet.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- footer end -->
+    <!--small footer start -->
+    <footer class="footer-small">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-sm-6 pull-right">
+                    <ul class="social-link-footer list-unstyled">
+                        <li class="wow flipInX" data-wow-duration="2s" data-wow-delay=".1s"><a href="#"><i class="fa fa-facebook"></i></a></li>
+                        <li class="wow flipInX" data-wow-duration="2s" data-wow-delay=".2s"><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                        <li class="wow flipInX" data-wow-duration="2s" data-wow-delay=".3s"><a href="#"><i class="fa fa-dribbble"></i></a></li>
+                        <li class="wow flipInX" data-wow-duration="2s" data-wow-delay=".4s"><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                        <li class="wow flipInX" data-wow-duration="2s" data-wow-delay=".5s"><a href="#"><i class="fa fa-twitter"></i></a></li>
+                        <li class="wow flipInX" data-wow-duration="2s" data-wow-delay=".6s"><a href="#"><i class="fa fa-skype"></i></a></li>
+                        <li class="wow flipInX" data-wow-duration="2s" data-wow-delay=".7s"><a href="#"><i class="fa fa-github"></i></a></li>
+                        <li class="wow flipInX" data-wow-duration="2s" data-wow-delay=".8s"><a href="#"><i class="fa fa-youtube"></i></a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                  <div class="copyright"> <p>Nxgxx demo web</p>
+                  </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!--small footer end-->
+
+    <!-- js placed at the end of the document so the pages load faster
+<script src="js/jquery.js">
+</script>
+-->
+    <script src="{% static 'homepage/js/jquery-1.8.3.min.js' %}">
+    </script>
+    <script src="{% static 'homepage/js/bootstrap.min.js' %}">
+    </script>
+    <script type="text/javascript" src="{% static 'homepage/js/hover-dropdown.js' %}">
+    </script>
+    <script defer src="{% static 'homepage/js/jquery.flexslider.js' %}">
+    </script>
+    <script type="text/javascript" src="{% static 'homepage/assets/bxslider/jquery.bxslider.js' %}">
+    </script>
+
+    <script type="text/javascript" src="{% static 'homepage/js/jquery.parallax-1.1.3.js' %}">
+    </script>
+    <script src="{% static 'homepage/js/wow.min.js' %}">
+    </script>
+    <script src="{% static 'homepage/assets/owlcarousel/owl.carousel.js' %}">
+    </script>
+
+    <script src="{% static 'homepage/js/jquery.easing.min.js' %}">
+    </script>
+    <script src="{% static 'homepage/js/link-hover.js' %}">
+    </script>
+    <script src="{% static 'homepage/js/superfish.js' %}">
+    </script>
+    <script type="text/javascript" src="{% static 'homepage/js/parallax-slider/jquery.cslider.js' %}">
+    </script>
+    <script type="text/javascript">
+      $(function() {
+
+        $('#da-slider').cslider({
+          autoplay    : true,
+          bgincrement : 100
+        });
+
+      });
+    </script>
+
+
+
+    <!--common script for all pages-->
+    <script src="{% static 'homepage/js/common-scripts.js' %}">
+    </script>
+
+    <script type="text/javascript">
+      jQuery(document).ready(function() {
+
+
+        $('.bxslider1').bxSlider({
+          minSlides: 5,
+          maxSlides: 6,
+          slideWidth: 360,
+          slideMargin: 2,
+          moveSlides: 1,
+          responsive: true,
+          nextSelector: '#slider-next',
+          prevSelector: '#slider-prev',
+          nextText: 'Onward →',
+          prevText: '← Go back'
+        });
+
+      });
+
+
+    </script>
+
+
+    <script>
+      $('a.info').tooltip();
+
+      $(window).load(function() {
+        $('.flexslider').flexslider({
+          animation: "slide",
+          start: function(slider) {
+            $('body').removeClass('loading');
+          }
+        });
+      });
+
+      $(document).ready(function() {
+
+        $("#owl-demo").owlCarousel({
+
+          items : 4
+
+        });
+
+      });
+
+      jQuery(document).ready(function(){
+        jQuery('ul.superfish').superfish();
+      });
+
+      new WOW().init();
+
+
+    </script>
+<script>
+
+;(function($) {
+$.fn.Slider = function(options) {
+  "use strict";
+
+  var settings = $.extend({
+    isAuto: true,
+    transTime: 3000,
+    animateSpeed: 1000,
+    sliderMode: 'slide', //'slide | fade',
+    pointerControl: true,
+    pointerEvent: 'click',//'hover' | 'click',
+    arrowControl: true,
+  }, options);
+  var interval;
+  var isAnimating     = false;
+  var $slider         = $(this);
+  var $sliderWrap     = $slider.find('.slider-inner');
+  var sliderCount     = $sliderWrap.find('> .item').length;
+  var sliderWidth     = $slider.width();
+  var currentIndex    = 0;
+
+  var sliderFun = {
+    controlInit: function() {
+      // pointerControl
+      if (settings.pointerControl) {
+
+        var html = '';
+        html += '<ol class="slider-pointer">';
+        for (var i = 0; i < sliderCount; i++) {
+          if (i == 0) {
+            html += '<li class="active"></li>'
+          }else{
+            html += '<li></li>'
+          }
+        }
+        html += '</ol>'
+        $slider.append(html);
+          // 指示器居中
+        var $pointer = $slider.find('.slider-pointer');
+        $pointer.css({
+          left: '50%',
+          marginLeft: - $pointer.width()/2
+        });
+      }
+      // pointerControl
+      if (settings.arrowControl) {
+        var html = "";
+        html += '<span class="slider-control prev">&lt;</span>';
+        html += '<span class="slider-control next">&gt;</span>'
+        $slider.append(html);
+      }
+      $slider.on('click', '.slider-control.prev', function(event) {
+        sliderFun.toggleSlide('prev');
+      });
+      $slider.on('click', '.slider-control.next', function(event) {
+        sliderFun.toggleSlide('next');
+      });
+    },
+    // slider
+    sliderInit: function() {
+      sliderFun.controlInit();
+      // 模式选择
+      if (settings.sliderMode == 'slide') {
+        // slide 模式
+        $sliderWrap.width(sliderWidth * sliderCount);
+        $sliderWrap.children().width(sliderWidth);
+      }else{
+        // mode 模式
+        $sliderWrap.children().css({
+          'position': 'absolute',
+          'left': 0,
+          'top': 0
+        });
+        $sliderWrap.children().first().siblings().hide();
+      }
+      // 控制事件
+      if (settings.pointerEvent == 'hover') {
+        $slider.find('.slider-pointer > li').mouseenter(function(event) {
+          sliderFun.sliderPlay($(this).index());
+        });
+      }else{
+        $slider.find('.slider-pointer > li').click(function(event) {
+          sliderFun.sliderPlay($(this).index());
+        });
+      }
+      // 自动播放
+      sliderFun.autoPlay();
+    },
+    // slidePlay
+    sliderPlay: function(index) {
+      sliderFun.stop();
+      isAnimating = true;
+      $sliderWrap.children().first().stop(true, true);
+      $sliderWrap.children().stop(true, true);
+      $slider.find('.slider-pointer').children()
+        .eq(index).addClass('active')
+        .siblings().removeClass('active');
+      if (settings.sliderMode == "slide") {
+        // slide
+        if (index > currentIndex) {
+          $sliderWrap.animate({
+            left: '-=' + Math.abs(index - currentIndex) * sliderWidth + 'px'
+          }, settings.animateSpeed, function() {
+            isAnimating = false;
+            sliderFun.autoPlay();
+          });
+        } else if (index < currentIndex) {
+          $sliderWrap.animate({
+            left: '+=' + Math.abs(index - currentIndex) * sliderWidth + 'px'
+          }, settings.animateSpeed, function() {
+            isAnimating = false;
+            sliderFun.autoPlay();
+          });
+        } else {
+          return;
+        }
+      }else{
+        // fade
+        if ($sliderWrap.children(':visible').index() == index) return;
+        $sliderWrap.children().fadeOut(settings.animateSpeed)
+          .eq(index).fadeIn(settings.animateSpeed, function() {
+            isAnimating = false;
+            sliderFun.autoPlay();
+          });
+      }
+      currentIndex = index;
+    },
+    // toggleSlide
+    toggleSlide: function(arrow) {
+      if (isAnimating) {
+        return;
+      }
+      var index;
+      if (arrow == 'prev') {
+        index = (currentIndex == 0) ? sliderCount - 1 : currentIndex - 1;
+        sliderFun.sliderPlay(index);
+      }else if(arrow =='next'){
+        index = (currentIndex == sliderCount - 1) ? 0 : currentIndex + 1;
+        sliderFun.sliderPlay(index);
+      }
+    },
+    // autoPlay
+    autoPlay: function() {
+      if (settings.isAuto) {
+        interval = setInterval(function () {
+          var index = currentIndex;
+          (currentIndex == sliderCount - 1) ? index = 0: index = currentIndex + 1;
+          sliderFun.sliderPlay(index);
+        }, settings.transTime);
+      }else{
+        return;
+      }
+    },
+    //stop
+    stop: function() {
+      clearInterval(interval);
+    },
+  };
+  sliderFun.sliderInit();
+}
+})(jQuery);
+jQuery(document).ready(function($) {
+  $('#slider').Slider();
+});
+</script>
+  </body>
+</html>

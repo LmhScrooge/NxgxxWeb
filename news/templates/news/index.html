@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+    <link rel="stylesheet" href="{% static 'news/css/normal.css' %}">
+    <script src="{% static 'news/js/jquery.min.js' %}"></script>
+</head>
+<title>News Index</title>
+<body>
+{% if latest_Article_list %}
+    <ul>
+    {% for Article in latest_Article_list %}
+        <li><a href="{% url 'news:detail' Article.id %}" target="_blank">{{ Article.title }}</a><span>{{ Article.update_time|date:"Y-m-d" }}</span></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No polls are available.</p>
+{% endif %}
+<p id="back-to-top"><a href="#top"><span></span></a></p>
+</body>
+</html>

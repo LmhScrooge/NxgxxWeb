@@ -1,0 +1,22 @@
+.indexPart1{ height:430px; padding-top:30px;}
+.indexPart1 .title{ height:38px; display:inline-block; border-bottom:#cbcbcd solid 2px;font-size:18px; color:#08a3d1; font-weight:bold;}
+.indexPart1 .title em{ padding-left:62px;}
+.indexPart1_l{ width:370px; margin-right:45px;}
+.indexPart1_l .detail{ height:165px; position:relative;}
+.indexPart1_l .detail .name{ height:46px; line-height:46px; overflow:hidden; font-size:16px;text-overflow:ellipsis;white-space:nowrap;}
+.indexPart1_l .detail .name a{ color:#fe9300;}
+.indexPart1_l .detail .imgDiv{ position:absolute; left:0px; top:46px;}
+.indexPart1_l .detail .content{ font-size:16px; height:98px; overflow:hidden; padding-left:145px; color:#8d8d8d; line-height:24px;}
+.indexPart1_l .list{ padding-top:10px;}
+.indexPart1_l .list li{ height:30px; line-height:30px; font-size:16px; overflow:hidden; /*padding-left:80px;*/ position:relative;}
+.indexPart1_l .list li em{ /*position:absolute; left:0px;*/ right:0; float:right; top:0px;}
+.indexPart1_l .more{ text-align:right;}
+.indexPart1_l .more a{ font-size:16px; color:#fe9300;}
+.indexPart1_r{ width:370px;}
+.indexPart1_r .imgDiv{ padding-top:17px;}
+.indexPart1_r .imgDiv img{ display:block;}
+.indexPart1_r .name{ font-size:16px; height:40px; line-height:45px; overflow:hidden;}
+.indexPart1_r .name a{ color:#333;}
+.indexPart1_r .content{ height:45px; font-size:16px; overflow:hidden;line-height:24px;}
+.indexPart1_r .more{ text-align:right; margin-top:10px;}
+.indexPart1_r .more a{ font-size:16px; color:#fe9300;}
